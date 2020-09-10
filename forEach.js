@@ -18,7 +18,7 @@ function copier(){
     name.forEach(function(item){
         copyname.push(item);        
     })
-    console.log( "Origional array  " + name + " =  Array copy : "+ copyname );
+    console.log( " Origional array  " + name + " =  Array copy : " + copyname );
 }
 
 copier();
