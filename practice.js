@@ -21,11 +21,16 @@ console.log(output);
 // Output: [5,6,7,1,2,3,4]
 
 const input = [1,2,3,4,5,6,7]
-input.splice(0,4);
-for (let i=1; i<5; i++){
-    input.push(i);
-}
+console.log(input);
+// rotate 1 steps to the right: [7,1,2,3,4,5,6]
+// rotate 2 steps to the right: [6,7,1,2,3,4,5]
+// rotate 3 steps to the right: [5,6,7,1,2,3,4]
+input.unshift(input.pop());
 console.log(input);
 
+input.unshift(input.pop());
+console.log(input);
 
+input.unshift(input.pop());
+console.log(input);
 
