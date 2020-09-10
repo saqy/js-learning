@@ -111,23 +111,23 @@ console.log(showResult);
 
 
 //use of every in arrays
-const array = [11, 444, 9, 16];
+const values = [11, 444, 9, 16];
 const isbelowThreshold = (currentValue) => currentValue <100;
-console.log(array.every(isbelowThreshold));
+console.log(values.every(isbelowThreshold));
 
 
 //use of reduce
 const reducer=(accumulator, currentValue) => accumulator + currentValue;
-console.log(array.reduce(reducer));
+console.log(values.reduce(reducer));
 
 
 //use of reverse
-console.log('reversed:', array.reverse());
+console.log('reversed:', values.reverse());
 
 
 //use of some
 const isaboveThreshold = (currentValue) => currentValue <100;
-console.log(array.some(isaboveThreshold));
+console.log(values.some(isaboveThreshold));
 
 //use of slice
 const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
