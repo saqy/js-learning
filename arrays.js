@@ -35,6 +35,11 @@ cars.forEach(function(car, index, array){
   console.log(array);
 });
 
+const items = [1, 2, 3, 4, 5, 6];
+items.forEach(function(item) {
+  console.log(item*item);
+})
+
 
 //use of includes in arrays whether value included?
 console.log(flowers.includes('white rose'));
@@ -98,6 +103,12 @@ const users  = [
     
     console.log(names)
 
+const multiply= [10, 12, 89, 4, 51];
+const showResult= multiply.map(function(number){
+  return number*2;
+});
+console.log(showResult);
+
 
 //use of every in arrays
 const array = [11, 444, 9, 16];
@@ -117,3 +128,14 @@ console.log('reversed:', array.reverse());
 //use of some
 const isaboveThreshold = (currentValue) => currentValue <100;
 console.log(array.some(isaboveThreshold));
+
+//use of slice
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+console.log(animals.slice(2));
+// expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// expected output: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+// expected output: Array ["bison", "camel", "duck", "elephant"]
