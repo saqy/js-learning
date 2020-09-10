@@ -1,3 +1,5 @@
+//array iterating 
+
 let array=["usman","ali","khan","kashif"];
 
 console.log("Orgional Array :  [" + array + "]");
