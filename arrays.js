@@ -6,6 +6,7 @@ console.log(numbers.fill(0,2,4));
 
 
 //use of filter in arrays
+//does not change the original array
 const flowers= ['tulip', 'rose', 'jasmine', 'orchid'];
 var result= flowers.filter (word => word.length<5);
 console.log(result);
@@ -26,6 +27,8 @@ console.log(result);
 
 
 //use of foreach in arrays
+//for every index
+//returns original array length
 const cars = ['Honda', 'Toyota', 'Kia', 'Mini'];
 cars.forEach(function(car, index, array){
   console.log(`${index} : ${car}`);
@@ -43,11 +46,27 @@ console.log(flowers.indexOf('lily'));
 
 
 //use of lastIndexOf/////// count index number in reverse order
-console.log(flowers.lastIndexOf('rose'));
+// console.log(flowers.lastIndexOf('rose'));
 
 
-//use of push in arrays
+//use of push in arrays end of array
 console.log(flowers.push('carnation'));
+
+//insert element at specific location
+//splice
+//start index, delete count, element to insert
+
+//add freesia to index 5 donot remove any
+flowers.splice(5, 0, 'Freesia');
+//add daisy to index 2 remove flower at index 2
+flowers.splice(2, 1, 'daisy');
+console.log(flowers);
+
+//delete element from specific location
+//delete element at location 1
+flowers.splice(1,1);
+//delete element at location 1 and 2
+flowers.splice(1,2);
 
 
 //use of pop in arrays
@@ -68,7 +87,7 @@ console.log(flowers.join('_'));
 
 //use of map in arrays
 const users  = [
-    {id: 1, name:'John'},
+    {id: 1, name: 'John'},
     {id: 2, name: 'Sara'},
     {id: 3, name: 'Karen'},
     {id: 4, name: 'Steve'}
@@ -98,11 +117,3 @@ console.log('reversed:', array.reverse());
 //use of some
 const isaboveThreshold = (currentValue) => currentValue <100;
 console.log(array.some(isaboveThreshold));
-
-
-//use of splice in arrays
-//add on index 5 donot remove any
-flowers.splice(5, 0, 'Freesia');
-//add on index 5 remove all
-// flowers.splice(0, 5, 'Freesia')
-console.log(flowers);
