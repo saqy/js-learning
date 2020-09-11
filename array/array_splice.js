@@ -3,7 +3,6 @@ names_arr = ["Sadaqat", "Usman", "Imshaz", "Salaman"];
 
 console.log("Original array    ", names_arr);
 // Apply splice method
-names_arr.splice(0, 3);
+names_arr.splice(2, 1, "Kaleem");
 
-names_arr.splice(3, "Sadaqat", "Ali", "Raja");
-console.log("Original array ++++++++++++++   ", names_arr);
+console.log("after splice=====   ", names_arr);
