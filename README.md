@@ -23,14 +23,14 @@ rotate 2 steps to the right: [6,7,1,2,3,4,5]<br />
 rotate 3 steps to the right: [5,6,7,1,2,3,4]<br />
 
 ## Question 4 
-Create a nested Create a nested for loops produce the loops produce the
+Create a nested Create a nested for loops produce the loops produce the <br />
 following output.
 
-....1
-...22
-..333
-.4444
-55555
+....1 <br />
+...22<br />
+..333<br />
+.4444<br />
+55555<br />
 
 
 ## Question 5 
