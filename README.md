@@ -22,5 +22,24 @@ rotate 1 steps to the right: [7,1,2,3,4,5,6] <br />
 rotate 2 steps to the right: [6,7,1,2,3,4,5]<br />
 rotate 3 steps to the right: [5,6,7,1,2,3,4]<br />
 
+## Question 4 
+Create a nested Create a nested for loops produce the loops produce the
+following output.
+
+....1
+...22
+..333
+.4444
+55555
 
 
+## Question 5 
+
+Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
+
+Example
+
+For inputArray = [3, 6, -2, -5, 7, 3], the output should be
+adjacentElementsProduct(inputArray) = 21.
+
+7 and 3 produce the largest product.
