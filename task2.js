@@ -14,14 +14,16 @@ for(let k=1;k<=5;k++){
 // Q no 02 :
 console.log("\n\nQ no 02 :");
 
-let inputArray=[1,2,3,4,5,6];
+let inputArray=[0,-1,2];
 let max=0;
 let maxima=[];
-for(let i = 0; i <= inputArray.length; i++) {
-    pro=(inputArray[i] * inputArray[i + 1]);
+let pro=0
+for(let i = 0; i <= inputArray.length-1; i++) {
+    console.log(maxima);
+    pro=inputArray[i] * inputArray[i + 1];
     if(pro>max){
         max=pro;
         maxima = [inputArray[i], inputArray[i + 1]];
     }                 
 };
-console.log("maximum Product Is =",max);
+console.log(" maximum Product Is = ",maxima,max);
