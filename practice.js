@@ -5,37 +5,25 @@ let matrix = [
   [4, 5, 6],
   [10, 8, -12],
 ];
-let lefttoRightDiagonal = [];
-let rightToLeftDiagonal = [];
+let leftCount = 0;
+let rightCount = 0;
 for (let i = 0; i < matrix.length; i++) {
   if (matrix[i][i] !== undefined) {
-    lefttoRightDiagonal.push(matrix[i][i]);
+    leftCount += matrix[i][i];
   }
   let elemlength = 1;
   elemlength = elemlength + i;
   if (matrix[i][matrix.length - elemlength] !== undefined) {
-    rightToLeftDiagonal.push(matrix[i][matrix.length - elemlength]);
+    rightCount += matrix[i][matrix.length - elemlength];
   }
 }
-let diagonalElement = [];
-diagonalElement[0] = lefttoRightDiagonal;
-diagonalElement[1] = rightToLeftDiagonal;
-console.log("digonalElement", diagonalElement);
-getSum = (acc, curr, index, arr) => {
-  return (acc += curr);
-};
 getDifference = (acc, curr, index, arr) => {
   return acc > curr ? acc - curr : curr - acc;
 };
-function diagonalDifference(diagonals) {
-  let sum = [];
-  for (let i = 0; i < diagonals.length; i++) {
-    sum.push(diagonals[i].reduce(getSum, 0));
-  }
-  return sum.reduce(getDifference);
+function diagonalDifference(a, b) {
+  return Math.abs(a - b);
 }
-
-let result = diagonalDifference(diagonalElement);
+let result = diagonalDifference(leftCount, rightCount);
 console.log("result is:", result);
 //Qno11
 console.log("=============Qno11=================");
@@ -69,15 +57,11 @@ let productPrices = [2.89, 3.29, 5.79];
 let productSold = ["eggs", "eggs", "cheese", "milk"];
 let soldPrice = [2.29, 2.89, 5.99, 3.19];
 let wrongCount = 0;
-let productObj = {};
-Products.forEach((item, index, arr) => {
-  let getPrice = productPrices[index];
-  productObj[item] = getPrice;
-});
 productSold.forEach((item, index, arr) => {
-  let getActualPrice = productObj[item];
+  let getIndexOfItem = Products.indexOf(item);
+  let getItemActualPrice = productPrices[getIndexOfItem];
   let getSoldPrice = soldPrice[index];
-  if (getActualPrice !== getSoldPrice) {
+  if (getItemActualPrice !== getSoldPrice) {
     wrongCount++;
   }
 });
