@@ -89,3 +89,37 @@ const fruitBasket = ['banana', 'cherry', 'orange', 'apple', 'cherry', 'orange', 
 
 It should return an object like this 
 { banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1 }
+
+## Question 10 
+Given a square matrix, calculate the absolute difference between the sums of its diagonals.
+
+For example, the square matrix  is shown below: <br />
+
+1 2 3  <br />
+4 5 6  <br />
+9 8 9  <br />
+The left-to-right diagonal = . The right to left diagonal = . Their absolute difference is . <br />
+
+Function description<br />
+
+Complete the  function in the editor below. <br />
+
+diagonalDifference takes the following parameter: <br />
+
+int arr[n][m]: an array of integers <br />
+
+Return <br />
+int: the absolute diagonal difference <br />
+
+Sample Input <br />
+
+3              <br />
+11 2 4         <br />
+4 5 6          <br />
+10 8 -12      <br />
+Sample Output  <br />
+
+15  <br />
+
+
+
