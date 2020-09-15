@@ -17,9 +17,6 @@ for (let i = 0; i < matrix.length; i++) {
     rightCount += matrix[i][matrix.length - elemlength];
   }
 }
-getDifference = (acc, curr, index, arr) => {
-  return acc > curr ? acc - curr : curr - acc;
-};
 function diagonalDifference(a, b) {
   return Math.abs(a - b);
 }
