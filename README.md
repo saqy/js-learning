@@ -149,6 +149,28 @@ proportion of positive values <br />
 proportion of negative values <br />
 proportion of zeros <br />
 
+## Question 12 
+
+Given the list of items and their actual prices and sold prices. Find the number of items in sold products which has wrong prices
+
+Example Input
+
+Products = ['eggs', 'milk', 'cheese'];  <br />
+productPrices = [2.89, 3.29, 5.79];  <br />
+productSold = ['eggs', 'eggs', 'cheese', 'milk']  <br />
+soldPrice = [2.89, 2.99, 5.97, 3.29];  <br />
+
+
+Example Output
+Here   <br />
+eggs has 2.99 price which is worng 
+milk has 5.97 price which is worng 
+So we will return 2 in this example. 
+
+
+
+
+
 
 
 
