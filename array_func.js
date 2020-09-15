@@ -17,8 +17,8 @@ console.log("Array element with greater length",res);
 
 let age=[12,15,18,19,20,22,23];
 
-let ages=age.filter(age=>age>18)
-console.log("Age greater then 18",ages);
+let ages=age.some(age=>age>18)
+console.log("......................Age greater then 18",ages,"....");
 
         //3) Reduce : 
 
@@ -59,5 +59,21 @@ console.log(ar3);
 
 const add_val=ar3.concat(1,2,3);
 console.log("Add value in array thourgh Concat :  ",add_val);
+
+        //6) Array.find()
+let ar=[17,18,19];
+const found=ar.find(age=>age>18);
+console.log(" Ages" ,found);
+
+let fruit=["apple","banana","cherry","banana"];
+let ress=fruit.find(frt=>frt=='banana');
+console.log(ress);
+
+
+let goods=[{item: "hammer",qauntity:12},{item: "rope",qauntity:12}];
+const res4=goods.find(({item})=>item=='hammer');
+console.log("The Good Are",res4)
+
+
 
 
