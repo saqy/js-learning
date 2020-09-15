@@ -1,79 +1,97 @@
-// Create a nested Create a nested for loops produce the loops produce the
-// following output.
+//  Below we will define an n-interesting polygon. 
+//Your task is to find the area of a polygon for a given n.
+//  Example n= 1, output = 1; For n = 2, the output should be output= 5; For n = 3, the output should be output= 13. For n = 4, the output should be output = 25.
 
-// ....1
-// ...22
-// ..333
-// .4444
-// 55555
-
-
-let count = 5;
-let output = "";
-for (let p = 1; p <= count; p++) {
-  output = "";
-  for (let q = 1; q <= count - p; q++) {
-  output += ".";
-  }
-  for (let s = 1; s <= p; s++) {
-      output += p;
-  }
-  console.log(output);
+function shapeArea(n){
+  
+  return n ** 2 + (n-1) ** 2
 }
+var res= shapeArea(3);
+console.log(res);
 
-// Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
+//calculate palindrome
+//For inputString = "aabaa",the output should be = true; 
+//For inputString = "abac",the output should be = false; 
+//For inputString = "a",the output should be = true.
+
+function pal(str) {
+  reverse = str.split('').reverse().join('');
+  for (let i = 0; i < str.length; i++) {
+    if (reverse === str) {
+        return true;
+    }
+  }
+  return false;
+ }
+ let palindrome= pal("aacbcaa");
+ console.log(palindrome);
+
+
+////////////////////////////////////////////////second method////////////////////////////////////////////////
+function palindromefunc(str) {
+  // var re = /[\W_]/i; //matches any word
+  str = str.split('');
+  // str = str.toLowerCase().replace(re, '');
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== str[str.length - 1 - i]) {
+      //0 a !== 7-0 a
+      //1 a !== 7-1 a
+      //2 b !== 7-2 c
+      //true --> exit
+        return false;
+    }
+  }
+  return true;
+ }
+ let result= palindromefunc("aacbctaa");
+ console.log(result);
+
+
+// Given a year, return the century it is in. 
+//The first century spans from the year 1 up to and including the year 100, 
+//the second - from the year 101 up to and including the year 200, etc.
 // Example
-// For inputArray = [3, 6, -2, -5, 7, 3], the output should be adjacentElementsProduct(inputArray) = 21.
-// 7 and 3 produce the largest product.
+// For year = 1905, the output should be = 20; For year = 1700, the output should be = 17.
 
-
-let inputArray= [3, 6, -2, -5, 7, 3];
-let result= inputArray[0]*inputArray[1];
-for(let i=1; i<inputArray.length; i++){
-    let x= inputArray[i] * inputArray[i+1];
-    if(x > result){
-        result = x;
-    };
-};
-console.log(result);
-
-
-///////////////////SEPTEMBER 10 TASK////////////////////////
-// Write a program to reverse an array or string using loop
-// input: [ 1, 2, 3 ]
-// output: [ 3, 2, 1 ]
-const numbers= [1,2,3];
-const result=[];
-for (let i=0; i<3; i++){
-    result.push(numbers.pop());
+function getCentury(year){
+  if (year % 100 === 0){
+    console.log (year / 100);
+  } else {
+    let remainder = year % 100;
+    console.log( ((year + 100) - remainder) / 100);
+  }
 }
-console.log(result);
+getCentury(2021);
 
 
-//Write a program to combine two arrays
-// firstInput = [ 1, 2, 3 ]
-// secondInput = [ 4, 5, 6 ]
-// Output: = [ 1, 2, 3, 4, 5, 6]
-const firstInput = [ 1, 2, 3 ];
-const secondInput = [ 4, 5, 6 ];
-for (let i=0; i<3; i++) {
-    firstInput.push(secondInput.shift());
-}
-console.log(firstInput);
+// Count frequencies of each entry in an array For example const fruitBasket = ['banana', 'cherry', 'orange', 'apple', 'cherry', 'orange', 'apple', 'banana', 'cherry', 'orange', 'fig' ];
+//It should return an object like this { banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1 }
 
+const fruitBasket = [
+                    'banana', 
+                    'cherry', 
+                    'orange', 
+                    'apple', 
+                    'cherry', 
+                    'orange', 
+                    'apple', 
+                    'banana', 
+                    'cherry', 
+                    'orange', 
+                    'fig' 
+                    ];
 
-// Given an array, rotate the array to the right by k steps, where k is non-negative.
-// Input: [1,2,3,4,5,6,7], k = 3
-// Output:[7,1,2,3,4,5,6]
-// [6,7,1,2,3,4,5]
-// [5,6,7,1,2,3,4]
-const input = [1,2,3,4,5,6,7]
-console.log(input);
-//add to top remove from end
-for(let k=1; k<=3; k++){
-    input.unshift(input.pop());
-    console.log(input);
-}
-
-
+function count(fruitBasket) {
+  // return fruitBasket.reduce((prev, curr) => (prev[curr] = ++prev[curr] || 1, prev), [])
+  return fruitBasket.reduce((accumulator, currentValue) => 
+   {
+    // console.log('accumulator[currentValue]++');
+    // console.log(accumulator[currentValue]++);
+    // console.log('++accumulator[currentValue]');
+    // console.log(++accumulator[currentValue]);
+     return (accumulator[currentValue] = ++accumulator[currentValue] || 1,accumulator);
+   },[]);
+  }
+var counter= count(fruitBasket);
+console.log(counter);
 
