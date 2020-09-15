@@ -6,7 +6,7 @@ function shapeArea(n){
   
   return n ** 2 + (n-1) ** 2
 }
-var res= shapeArea(3);
+let res= shapeArea(3);
 console.log(res);
 
 //calculate palindrome
@@ -55,13 +55,14 @@ function palindromefunc(str) {
 
 function getCentury(year){
   if (year % 100 === 0){
-    console.log (year / 100);
+    return year / 100;
   } else {
     let remainder = year % 100;
-    console.log( ((year + 100) - remainder) / 100);
+    return ((year + 100) - remainder) / 100;
   }
 }
-getCentury(2021);
+let century= getCentury(2021);
+console.log(century);
 
 
 // Count frequencies of each entry in an array For example const fruitBasket = ['banana', 'cherry', 'orange', 'apple', 'cherry', 'orange', 'apple', 'banana', 'cherry', 'orange', 'fig' ];
