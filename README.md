@@ -167,6 +167,9 @@ eggs has 2.99 price which is worng
 milk has 5.97 price which is worng 
 So we will return 2 in this example. 
 
+## Question 13 
+https://www.hackerrank.com/challenges/magic-square-forming/problem
+
 
 
 
