@@ -29,3 +29,10 @@ let uniqueData = duplicateData.reduce(function (accumulator, currentValue) {
 }, []);
 
 console.log(uniqueData);
+
+console.log("==============example3===================");
+let sampleDta = [3.24, 2.78, 999];
+let maxValue = sampleDta.reduce((acc, curr) => Math.max(acc, curr));
+let minValue = sampleDta.reduce((acc, curr) => Math.min(acc, curr));
+console.log("Maximu is:", maxValue);
+console.log("Minimum is:", minValue);

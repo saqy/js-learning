@@ -51,3 +51,23 @@ const modifiedWords = wordsData.filter((word, index, arr) => {
 });
 
 console.log(modifiedWords);
+
+console.log("=================example5=========================");
+
+let fruits = ["apple", "banana", "grapes", "mango", "orange"];
+
+function searchItems(arr, query) {
+  return arr.filter((item, index) => {
+    return item.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+  });
+}
+let finalData = searchItems(fruits, "gr");
+console.log("Data", finalData);
+
+console.log("=================example6=========================");
+let mapData = [1, 2, 3, 4, 5];
+let mapResult = mapData.filter((item, index, arra) => {
+  // mapData[i].push(6);
+  mapData.pop();
+  return item > 0;
+});
