@@ -54,8 +54,18 @@ let wishlist = [
 ];
 
 let totalNumbers = wishlist.reduce((acc, item) => {
-    acc["price"] = acc.price + item.price;
-    return acc
-})
+    const p = acc.price ? acc.price : 0
+    acc['price'] = p + item.price;
+    return acc;
+}, {})
 
+console.log("totalNumbers.price");
 console.log(totalNumbers.price);
+
+let sum = 0;
+for (let i = 0; i < wishlist.length; i++) {
+    sum += wishlist[i].price;
+
+}
+
+console.log(sum);
