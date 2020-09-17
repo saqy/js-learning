@@ -46,6 +46,7 @@ let wordsData = [
 ];
 
 const modifiedWords = wordsData.filter((word, index, arr) => {
+  console.log("check i", index);
   arr[index + 1] += " extra";
   return word.length > 6;
 });
