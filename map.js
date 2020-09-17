@@ -1,4 +1,4 @@
-
+console.log('map practice')
 //Example 1
 let Array = [{key: 1, value: 10}, 
     {key: 2, value: 20}, 
