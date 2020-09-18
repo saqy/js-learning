@@ -8,9 +8,7 @@ function removeFromQueue() {
   let queueLength = queue.length;
   let withOutRear = [];
   for (let i = 0; i < queueLength; i++) {
-    console.log(queueLength - i);
-    queue[queueLength - i] !== undefined &&
-      withOutRear.push(queue[queueLength - i]);
+    queue[queueLength - i] && withOutRear.push(queue[queueLength - i]);
   }
   queue = withOutRear;
 }
