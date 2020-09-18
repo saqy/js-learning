@@ -13,13 +13,14 @@ function removestack(){
 function addtoqueue(val){
     return queue_array.push(val);     
 }
-let ar=[];
+
 
 function removequeue(){
+    let temp=[];
     for(let i=1;i<=queue_array.length-1;i++){      
-        ar.push(queue_array[i]);           // queue_array.pop()        
+        temp.push(queue_array[i]);           // queue_array.pop()        
     }
-    queue_array=ar;
+    queue_array=temp;
 }
 
 addtostack(1);
@@ -29,14 +30,14 @@ console.log("Origional Stack Array : ",stack_array)
 removestack();
 console.log("After Remove From Stack : ",stack_array);
 
-addtoqueue(1)
-addtoqueue(2)
-addtoqueue(3)
-addtoqueue(4)
-addtoqueue(5)
-addtoqueue(6)
-console.log("Origional Queue Array : ",queue_array)
+addtoqueue(1);
+addtoqueue(2);
+addtoqueue(3);
+addtoqueue(4);
+addtoqueue(5);
+addtoqueue(6);
+console.log("Origional Queue Array : ",queue_array);
 removequeue();
 
 
-console.log("After Remove From Queue : ",queue_array)
+console.log("After Remove From Queue : ",queue_array);
