@@ -50,6 +50,9 @@ let allSumArr = [];
 let sumReducer = (acc, curr) => {
   return acc + curr;
 };
+let getMinimum = (acc, curr) => {
+  return acc < curr ? acc : curr;
+};
 for (let i = 0; i < matrixSolutions.length; i++) {
   let finalSum = 0;
   result = [];
@@ -63,8 +66,8 @@ for (let i = 0; i < matrixSolutions.length; i++) {
 
   allSumArr.push(result.reduce(sumReducer, 0));
 }
-console.log("Sum of All Arrays : ", allSumArr);
-let getMinimumCost = Math.min.apply(null, allSumArr);
+let getMinimumCost = allSumArr.reduce(getMinimum);
+console.log("getMinimu value", getMinimumCost);
 let getIndexFromSum = allSumArr.indexOf(getMinimumCost);
 console.log("Minimum cost : ", getMinimumCost);
 console.log("Matrix with Minimum Cost : ", matrixSolutions[getIndexFromSum]);
