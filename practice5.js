@@ -33,7 +33,7 @@ let matrixSolutions = [
     [6, 7, 2],
     [1, 5, 9],
     [8, 3, 4],
-  ],
+  ], //selected ones
   [
     [8, 1, 6],
     [3, 5, 7],
@@ -45,7 +45,6 @@ let matrixSolutions = [
     [2, 7, 6],
   ],
 ];
-
 let result = [];
 let allSumArr = [];
 let sumReducer = (acc, curr) => {
@@ -58,13 +57,14 @@ for (let i = 0; i < matrixSolutions.length; i++) {
     for (let k = 0; k < matrixSolutions[i][j].length; k++) {
       let bothMatrixSum = 0;
       bothMatrixSum = Math.abs(sampleData[j][k] - matrixSolutions[i][j][k]);
-      result[j] ? result[j].push(bothMatrixSum) : (result[j] = [bothMatrixSum]);
+      result.push(bothMatrixSum);
     }
   }
-  allSumArr.push(result.flat().reduce(sumReducer, 0));
+
+  allSumArr.push(result.reduce(sumReducer, 0));
 }
-console.log(allSumArr);
+console.log("Sum of All Arrays : ", allSumArr);
 let getMinimumCost = Math.min.apply(null, allSumArr);
 let getIndexFromSum = allSumArr.indexOf(getMinimumCost);
-console.log("Minimum cost", getMinimumCost);
-console.log("Matrix with Minimum Cost", matrixSolutions[getIndexFromSum]);
+console.log("Minimum cost : ", getMinimumCost);
+console.log("Matrix with Minimum Cost : ", matrixSolutions[getIndexFromSum]);
