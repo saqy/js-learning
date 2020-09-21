@@ -31,6 +31,9 @@ addToQueue(3);
 removeFromQueue();
 addToQueue(10);
 removeFromQueue();
+removeFromQueue();
+addToQueue(15);
+removeFromQueue();
 
 // function factorial(n) {
 //   if (n === 1) {
