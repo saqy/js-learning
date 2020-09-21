@@ -2,7 +2,6 @@ let queue_array=[];
 let stack_array=[];
 
 //Stack Implememntation
-
 function addtostack(val){
     return stack_array.push(val);     
 }
@@ -14,16 +13,13 @@ function removestack(){
 function addtoqueue(val){
     return queue_array.push(val);     
 }
-
 //To Remove From Queue
 function removequeue(){
     let temp=[];
-    let queue_len =queue_array.length;
-    for(let i=0;i<=queue_len;i++){   
-        i==queue_len?  temp.pop(): temp.push(queue_array.pop());      
+    for(let i=0;i<=queue_array.length;i++){   
+        i === queue_array.length ? temp.pop(): temp.push(queue_array.pop());      
     }
-    let temp_length=temp.length;
-    for(let i=0;i<temp_length;i++){  
+    for(let i=0;i<temp.length;i++){  
         queue_array.push(temp.pop());              
     }
 }
