@@ -8,9 +8,15 @@ function removeFromQueue() {
   let queueLength = queue.length;
   let withOutRear = [];
   for (let i = 0; i < queueLength; i++) {
-    queue[queueLength - i] && withOutRear.push(queue[queueLength - i]);
+    let element = queue.pop();
+    withOutRear.push(element);
   }
+  console.log("Orignal Array", queue);
+  console.log("new  Array", withOutRear);
+  withOutRear.pop();
+  console.log("new  Array after pop", queue);
   queue = withOutRear;
+  console.log("Orignal Array now", queue);
 }
 
 function addToStack(value) {
@@ -20,17 +26,16 @@ function removeFromStack() {
   stack.pop();
 }
 
-addToStack(1);
-addToStack(2);
-addToStack(3);
-console.log("Stack Before", stack);
-removeFromStack();
-console.log("Stack After", stack);
 addToQueue(1);
-addToQueue(2);
 addToQueue(3);
-console.log("Queue Before", queue);
 removeFromQueue();
-console.log("Queue After", queue);
+addToQueue(10);
 removeFromQueue();
-console.log("Queue After", queue);
+
+// function factorial(n) {
+//   if (n === 1) {
+//     return 1;
+//   }
+
+//   return n * factorial(n - 1);
+// }
