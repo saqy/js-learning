@@ -15,21 +15,7 @@ function addtoqueue(val){
     return queue_array.push(val);     
 }
 
-
-// function removequeue(){
-//     let temp=[];
-//     let len =queue_array.length;
-//     for(let i=0;i<len;i++){   
-//         if(len==0){
-//             temp.push(queue_array.pop());           // queue_array.pop()        
-//             console.log("tem",temp);
-//             queue_array=temp;
-//         }   
-//         // queue_array=temp;
-//     }
-//     // queue_array=temp;
-// }
-
+//To Remove From Queue
 function removequeue(){
     let temp=[];
     let queue_len =queue_array.length;
@@ -42,6 +28,7 @@ function removequeue(){
     }
 }
 
+// func calss
 addtostack(1);
 addtostack(2);
 addtostack(3);
