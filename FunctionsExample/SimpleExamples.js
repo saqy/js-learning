@@ -55,3 +55,4 @@ function myConcat(separator) {
   return result;
 }
 console.log(myConcat("mike", "red", "orange", "blue"));
+console.log("=================exampl6===========");

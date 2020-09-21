@@ -19,3 +19,11 @@ const sampleObj = {
 };
 
 console.log(sampleObj.foo); // "bar
+console.log("===============example3============");
+const testGetter = {
+  log: 100,
+  get latest() {
+    return this.log;
+  },
+};
+console.log(testGetter.latest);

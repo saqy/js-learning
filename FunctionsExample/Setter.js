@@ -10,7 +10,7 @@ language.current = "EN";
 language.current = "FA";
 
 console.log(language.log);
-console.log("==========example1===========");
+console.log("==========example2===========");
 const expr = "foo";
 
 const obj = {
@@ -27,13 +27,12 @@ obj.foo = "baz";
 //  run the setter
 
 console.log(obj.baz);
-console.log("==========example2===========");
-// let number = 6;
-
-// function test(number) {
-//   number = 100;
-//   return number;
-// }
-// let result = test(number);
-// console.log("number is:", number);
-// console.log("function result:", result);
+console.log("==========example3===========");
+const testObject = {
+  set current(name) {
+    this.logs.push(name);
+  },
+  logs: [1, 3, 4, 5, 6],
+};
+testObject.current = 100;
+console.log(testObject.logs);
