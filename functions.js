@@ -47,5 +47,54 @@ return n<2 ? 1 : n* fac(n-1)
 
 console.log("Factorial : ",factorial(8))
 
-//Functions Expressions: 
-console.log("== Example 5 ==")
+//Take Cube Of A numbers in aray: 
+console.log("== Example 5 ==");
+
+function map(f,a){
+    let res=[];
+    for(let i=0;i<=a.length-1;i++){
+        res[i]=f(a[i]);
+    }
+    return res
+}
+
+let f=function(a){
+    return a*a*a;
+}
+let num=[1,2,3];
+
+let cube=map(f,num);
+console.log("Origional Array :" , num , "---> Cube Of Array Elements" , cube)
+
+//Context-Disscussion
+console.log("== Example 6 ==");
+function a(){
+    console.log("Its a inner");
+    b();
+    console.log("its a after b-call");
+}
+function b(){
+    console.log("its inner b");
+    c();
+    console.log("its b after c-call");
+}
+function c(){
+    console.log("its inner c")
+}
+a()
+
+//Call Back Functions
+console.log("== Example 7  ==");
+const aaa =()=>{
+    setTimeout(
+        function () {
+            console.log("Wellcome to 1st Function")
+            bbb()
+        }
+    ,2000 )
+}
+const bbb=()=>{
+    console.log("Wellcome to the 2nd Functions")
+}
+aaa()
+//bbb()
