@@ -46,3 +46,6 @@ return n<2 ? 1 : n* fac(n-1)
 }
 
 console.log("Factorial : ",factorial(8))
+
+//Functions Expressions: 
+console.log("== Example 5 ==")
