@@ -119,3 +119,29 @@ function makeAdder(x){
  }
  let bound = bindMethod.bind(nameObj)
  console.log(bound('iplex Office in bind method'))
+
+
+//Example Binding in reduce
+
+ const user = {
+    name: 'Tyler',
+    age: 27,
+    languages: ['JavaScript', 'Ruby', 'Python'],
+    
+  }
+
+ function greet() {
+    const hello = `Hello, my name is ${this.name} and I know`
+
+    const langs = this.languages.reduce(function (str, lang, i) {
+      if (i === this.languages.length - 1) {
+        return `${str} and ${lang}.`
+      }
+
+      return `${str} ${lang},`
+    }.bind(this), "")
+
+    return `${hello}${langs}`
+  }
+  let bound2 = greet.bind(user)
+  console.log(bound2())
