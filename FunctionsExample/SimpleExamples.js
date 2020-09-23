@@ -8,7 +8,7 @@ function map(f, a) {
 const f = function (x) {
   return x * x * x;
 };
-let numbers = [0, 1, 2, 5, 10];
+let numbers = [0, 1, 2];
 let cube = map(f, numbers);
 console.log(cube);
 console.log("===================Example2==============");
@@ -21,7 +21,8 @@ function factorial(n) {
     return x;
   }
 }
-factorial(5);
+
+5;
 
 console.log("===============exampl3=================");
 function foo(i) {
@@ -56,3 +57,99 @@ function myConcat(separator) {
 }
 console.log(myConcat("mike", "red", "orange", "blue"));
 console.log("=================exampl6===========");
+// (function () {
+//   var ab = (cb = 3);
+// })();
+
+// console.log("type of ", typeof ab);
+// var ab = 12;
+const square = function (number) {
+  return number * number;
+};
+var x = square(4);
+console.log("X:>", x);
+console.log("=================exampl7===========");
+let data = [1, 2, 3, 4, 5];
+function map(array) {
+  let result = [];
+  for (let i = 0; i < array.length; i++) {
+    result[i] = multiply(array[i]);
+  }
+  return result;
+}
+
+function multiply(element) {
+  return element * 2;
+}
+
+console.log("==============example8===========");
+// Uncaught TypeError: square is not a function
+// const testSequare = function (n) {
+//   return n * n;
+// };
+function test() {
+  var test1 = 5;
+}
+(function test2() {
+  var test2 = 7;
+})();
+
+// console.log("test", test1);
+// console.log("test2", test2);
+console.log("==============example9===========");
+
+let testData = [1, 2, 3, 4, 5];
+function loopData(index) {
+  if (index < 0) {
+    return;
+  } else {
+  }
+  let result = testData[index] ? testData[index] : "";
+  console.log(result);
+  loopData(index - 1);
+}
+
+loopData(testData.length);
+console.log("==============example10===========");
+function addValues(a, b) {
+  function multiply(x) {
+    return x * x;
+  }
+  return multiply(a) + multiply(b);
+}
+console.log("vlaue is:", addValues(10, 20));
+
+console.log("==============example11===========");
+let xy = 32243;
+function reverseString() {
+  return xy.toString().split("").reverse().join("");
+}
+console.log("check reverse", reverseString());
+
+console.log("==============example12===========");
+
+function outer() {
+  var b = 10;
+  function inner() {
+    var a = 20;
+    console.log(a + b);
+  }
+  return inner;
+}
+var X = outer();
+console.log(X());
+console.log("==============example13===========");
+
+function isPrimeNumber(number) {
+  if (number === 1 || number === 2) {
+    return true;
+  } else {
+    for (let i = 2; i < number; i++) {
+      if (number % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+console.log(isPrimeNumber(9));
