@@ -45,3 +45,6 @@
         .catch(function(err){
             console.log(err);
         });
+
+        //practice promise objects
+        

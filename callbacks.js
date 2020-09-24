@@ -24,3 +24,8 @@ function execute(){
 download(function(){
     process(execute)
 })
+
+//expected output
+//downloading..
+//processing..
+//execute..
