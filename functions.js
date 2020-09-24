@@ -84,17 +84,40 @@ function c(){
 a()
 
 //Call Back Functions
-console.log("== Example 7  ==");
-const aaa =()=>{
-    setTimeout(
-        function () {
-            console.log("Wellcome to 1st Function")
-            bbb()
-        }
-    ,2000 )
+// console.log("== Example 7  ==");
+// const aaa =()=>{
+//     setTimeout(
+//         function () {
+//             console.log("Wellcome to 1st Function")
+//             bbb()
+//         }
+//         ,0)
+//     // ,2000 )
+// }
+// const bbb=()=>{
+//     console.log("Wellcome to the 2nd Functions")
+// }
+// aaa()
+// bbb()
+
+
+//objects and Bindin g : 
+console.log("== Example 8  ==");
+y1={
+    name:"usman",
+    age:23
 }
-const bbb=()=>{
-    console.log("Wellcome to the 2nd Functions")
+y2={
+    name:"ali",
+    age:24
 }
-aaa()
-//bbb()
+function O_bind(){
+    console.log(`My Name is ${this.name} and my age is ${this.age}`)
+}
+
+const binded=O_bind.bind(y2);
+
+binded();
+
+
+
