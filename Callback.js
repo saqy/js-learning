@@ -1,7 +1,6 @@
 //callBacks
 console.log("== Example 9  ==");
-
-const download=(process)=>{
+const download= process =>{
     setTimeout(()=>{
         console.log("Downloading  . . . . ");
         process();
@@ -13,7 +12,6 @@ const process=(exec)=>{
         exec()
     },3000);
     // cb();
- 
 }
 function execute(){
     setTimeout(()=>{
@@ -21,7 +19,10 @@ function execute(){
     },4000)
  
 }
-
 download(()=>{
       process(execute)
 })
+
+
+
+

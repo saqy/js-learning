@@ -3,7 +3,7 @@ function printString(str){
         setTimeout(()=>{
             console.log(str)
             resolve()
-        },2000)
+        },1000)
     })
 }
 console.log("Now to print A,B,C in sequence with promises");
