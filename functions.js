@@ -4,7 +4,7 @@ function square(a){
     return a*a;
 } 
 
-console.log("==Example 1== Square Of A Number : ",square(12));
+console.log("= = Example 1 = = Square Of A Number : ",square(12));
 //Object Values Changes
 console.log("==Example 2:==Update non-primitive Value By Functions")
 function myfun(Object) {
