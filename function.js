@@ -7,8 +7,8 @@ function makeAdder(x){
  let addFive = makeAdder(5);
  let addTwo = makeAdder(2)
  
- console.log(addFive(2));
- console.log(addTwo(2));
+//  console.log(addFive(2));
+//  console.log(addTwo(2));
  
  
  //Example 2
@@ -21,7 +21,7 @@ function makeAdder(x){
  }
  
  let funcName = closure();
- console.log(funcName())
+ //console.log(funcName())
   
  //Example 3
  
@@ -34,8 +34,8 @@ function makeAdder(x){
      return inner
  }
  let x = outer();
- console.log(typeof x)
- console.log(x())
+//  console.log(typeof x)
+//  console.log(x())
  /*
   In other words, the inner function preserves the scope chain of the enclosing 
   function(outer function) at the time the enclosing function was executed,
@@ -63,17 +63,17 @@ function makeAdder(x){
  
  let funcCall = outerFunc();
  
- console.log(funcCall)
- console.log(funcCall())
- console.log(funcCall())
- console.log(funcCall())
+  console.log(funcCall)
+  console.log(funcCall())
+  console.log(funcCall())
+  console.log(funcCall())
  
  //Example 5 Rest 
  
  function restPrac(multiplier,...args){
      return args.map(a=> multiplier * a)
  }
- console.log(restPrac(2,1,2,3,4))
+// console.log(restPrac(2,1,2,3,4))
  
  
  //Example 6
@@ -82,7 +82,7 @@ function makeAdder(x){
   return args
  
  }
- console.log(Rest2('ishaq',1,2,3,4,5))
+ //console.log(Rest2('ishaq',1,2,3,4,5))
  
  
  //Example 7 Call method
@@ -95,7 +95,7 @@ function makeAdder(x){
      return `Hey ${this.name}, welcome to ${place}`
  }
  let callFunc = callMethod.call(object,'iplex office in call method')
- console.log(callFunc)
+ //console.log(callFunc)
  
  //Example 8 Apply Method
  let obj = {
@@ -106,7 +106,7 @@ function makeAdder(x){
      return `Hey ${this.name}, welcome to ${place}`
  }
  let applyFunc = callMethod.apply(object,['iplex Office in apply method'])
- console.log(applyFunc)
+ //console.log(applyFunc)
  
  //Example Bind method
  
@@ -118,7 +118,7 @@ function makeAdder(x){
      return `Hey ${this.name}, welcome to ${place}`
  }
  let bound = bindMethod.bind(nameObj)
- console.log(bound('iplex Office in bind method'))
+ //console.log(bound('iplex Office in bind method'))
 
 
 //Example Binding in reduce
@@ -144,4 +144,14 @@ function makeAdder(x){
     return `${hello}${langs}`
   }
   let bound2 = greet.bind(user)
-  console.log(bound2())
+  //console.log(bound2())
+
+
+
+//Bind 
+  let objectt = {things: 3};
+let addThings = function(a, b, c){
+ return this.things + a + b + c;
+};
+console.log( addThings.bind(objectt)(1,4,6) );
+console.log( addThings.bind(objectt,1,4,6)() );
