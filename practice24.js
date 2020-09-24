@@ -1,5 +1,3 @@
-                ///QUESTION 14, 15
-                
                 // //promises
 
                 function delayedUpperCase(input, n){
@@ -7,6 +5,7 @@
                         setTimeout(()=>{
                             const err= true;
                             if(typeof input === 'string') {
+                                console.log('resolved');
                                 resolve(input.toUpperCase());
                             } else {
                                 reject('rejected with same input ' +input);
@@ -15,23 +14,15 @@
                         },n)
                     })
                 }
-                // function execute(input){
-                //     // return input;
-                //     console.log(input + ' resolved with same string in uppercase.. ');
-                // }
+                function execute(input){
+                    // return input;
+                    console.log(input + ' resolved with same string in uppercase.. ');
+                }
 
-                delayedUpperCase(1, 1000)
-                .then(function(res){
-                    console.log('here 1', res);
-                })
-                .then(function(res){
-                   console.log('here 2', res);
-                })
-                .then(function(res){
-                   console.log('here 3', res);
-                })
+                delayedUpperCase('abc', 1000)
+                .then(execute)
                 .catch(function(err){
-                    console.log('here 4',err);
+                    console.log(err);
                 });
 
                 //async await
