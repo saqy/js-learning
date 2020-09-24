@@ -140,14 +140,13 @@ integers.forEach((i)=>{
 }
 );
 console.log('\nproportion of positive values: '+(numberOfPositive/integers.length).toPrecision(2)
-            +'\nproportion of negative values: '+(numberOfNegative/integers.length).toPrecision(2)
-            +'\nproportion of zeros: '+(numberOfZeros/integers.length).toPrecision(2)
-            );
++'\nproportion of negative values: '+(numberOfNegative/integers.length).toPrecision(2)
++'\nproportion of zeros: '+(numberOfZeros/integers.length).toPrecision(2));
 
 
  //Q#12           
 // Given the list of items and their actual prices and sold prices. 
-//Find the number of items in sold products which has wrong prices
+// Find the number of items in sold products which has wrong prices
 
 let products = ['eggs', 'milk', 'cheese'];
 let productPrices = [2.89, 3.29, 5.79];
@@ -166,3 +165,111 @@ function wrongPrices(productsSold) {
 }
 var count= wrongPrices(productsSold);
 console.log('\nProducts with wrong prices: '+count+'\n');
+
+
+//Q#13
+let input = [5, 3, 1, 1, 5, 8, 6, 4, 2];
+let magicSquares = [
+  [8, 1, 6, 3, 5, 7, 4, 9, 2],//17   
+  [4, 3, 8, 9, 5, 1, 2, 7, 6],//31
+  [2, 9, 4, 7, 5, 3, 6, 1, 8],//29
+  [6, 7, 2, 1, 5, 9, 8, 3, 4],//13
+  [6, 1, 8, 7, 5, 3, 2, 9, 4],//29
+  [8, 3, 4, 1, 5, 9, 6, 7, 2],//7
+  [4, 9, 2, 3, 5, 7, 8, 1, 6]//21
+  [2, 7, 6, 9, 5, 1, 4, 3, 8]//33
+];
+let cost =0;
+for (let m = 0; m < magicSquares.length; m++) {
+  let currCost = 0;
+  for (let i = 0; i < input.length; i++) {
+    // console.log('fghnm'+squares[m]);
+    currCost += (magicSquares[m][i] - input[i]);
+  }
+  if (currCost < cost) { //11<0 false
+    cost = currCost;//0
+  }
+}
+console.log('cost total is: ' +cost+ '\n');
+
+
+
+// let products = ["eggs", "milk", "cheese"];
+// let productPrices = [2.89, 3.29, 5.79];
+// let productSold = ["eggs", "eggs", "cheese", "milk"];
+// let soldPrice = [2.29, 2.89, 5.99, 3.19];
+// let wrongPriceCount = 0;
+// productSold.forEach((curr, idx) => {
+//   // console.log(soldPrice[idx]);
+//   if(productPrices[products.indexOf(curr)] !== soldPrice[idx]) {
+//     wrongPriceCount++;
+//   }
+// });
+// console.log('\nProducts with wrong prices: '+wrongPriceCount+'\n');
+
+// let arrayMap= [1,2,3,4,5]
+
+// let resultMap = arrayMap.map((currentValue, index) => {
+//   arrayMap.pop();
+//   if(currentValue > 0){
+//      return currentValue
+//   }
+// })
+
+// console.log('resultMap');
+// console.log(resultMap.length);
+
+
+
+let array = [[1, [1,2,3, [4,5]]]]
+
+console.log(array.flat(2));
+
+let reduceArray = [1,2,3,4,5];
+
+var wishlist = [
+  { title: "Tesla Model S", price: 90000 },
+  { title: "4 carat diamond ring", price: 45000 },
+  { title: "Fancy hacky Sack", price: 5 },
+  { title: "Gold fidgit spinner", price: 2000 },
+  { title: "A second Tesla Model S", price: 90000 }
+];
+
+const resultReduced = wishlist.reduce((accumulator, currentValue )=>{
+
+    return accumulator + currentValue.price;
+
+},0);
+
+
+console.log('resultReduced');
+console.log(resultReduced);
+
+
+let everyArray= [1,3,3];
+
+const resultEvery= everyArray.every((currentValue, index)=>{
+  everyArray.push(5);
+  console.log(currentValue);
+      if(currentValue > 3  ){
+         return currentValue;
+      }
+
+})
+
+console.log(resultEvery);
+
+console.log('dxfcgvhbjn');
+// Queue : FIFO
+// Stack:   LIFO
+
+// let a1 =[];
+// let a2= [];
+
+// Using only push(), pop(), and array length. Create a Queue!
+// a1[i]   X
+// for yes  
+
+// addtoQueue(value); //add to the begining
+// removeQueue();  // return first inserted value
+
