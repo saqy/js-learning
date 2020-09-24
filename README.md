@@ -170,6 +170,17 @@ So we will return 2 in this example.
 ## Question 13 
 https://www.hackerrank.com/challenges/magic-square-forming/problem
 
+## Question 14 
+ make a function "delayedUpperCase(input, n)" that takes in a 2 parameters </br>
+ and returns a new promise. using setTimeout, </br>
+ after n milliseconds, the promise will either </br>
+ resolove or reject. if the input is a string, </br>
+ the promise resolves with that same string </br>
+ uppercased. if the input is anything but a string </br>
+ it rejects with that same input </br>
+
+// call the function delayedUpperCase
+
 
 
 
