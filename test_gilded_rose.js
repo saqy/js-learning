@@ -10,3 +10,4 @@ describe("Gilded Rose", function() {
   });
 
 });
+
