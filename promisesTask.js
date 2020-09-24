@@ -12,16 +12,9 @@ it rejects with that same input
 
 function delayedUpperCase(input,n){
     return new Promise((resolve,reject)=>{
-        setTimeout(
-            () => {
-              if(typeof input === 'string'){
-                  resolve(input.toUpperCase())
-              }else{
-                  reject(input)
-              }
-            }, 
-            n
-          )
+    setTimeout( () => {
+        return typeof input === 'string' ? resolve(input.toUpperCase()) : reject(input)
+              },n)
     }).then(data=>{console.log(data)})
     .catch(e=>console.log(e))
 }

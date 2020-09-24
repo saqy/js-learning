@@ -1,17 +1,10 @@
 async function delayedUpperCase(input,n){
     let promise =  new Promise((resolve,reject)=>{
-        setTimeout(
-            () => {
-              if(typeof input === 'string'){
-                  resolve(input.toUpperCase())
-              }else{
-                  reject(input)
-              }
-            }, 
-            n
-          )
+        setTimeout(() => {
+             return typeof input === 'string' ? resolve(input.toUpperCase()) : reject(input)
+            }, n)
     })
     let result = await promise
-console.log( result)
+console.log(result)
 }
 delayedUpperCase('ishaq',1000)
