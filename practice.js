@@ -260,16 +260,5 @@ const resultEvery= everyArray.every((currentValue, index)=>{
 console.log(resultEvery);
 
 console.log('dxfcgvhbjn');
-// Queue : FIFO
-// Stack:   LIFO
 
-// let a1 =[];
-// let a2= [];
-
-// Using only push(), pop(), and array length. Create a Queue!
-// a1[i]   X
-// for yes  
-
-// addtoQueue(value); //add to the begining
-// removeQueue();  // return first inserted value
 
