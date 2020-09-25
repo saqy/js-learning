@@ -8,3 +8,6 @@ let promise4 = new Promise((res,rej)=>{
 })
 
 Promise.all([promise1,promise2,promise4]).then(val=>console.log(val)).catch(e=>console.log(e))
+
+let a = Promise.allSettled([])
+console.log(a)
