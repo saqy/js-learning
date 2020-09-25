@@ -1,19 +1,25 @@
 
 console.log("= = = Q no 15 = = = Using Async Await = = = =")
 
-delayedUpperCase2 = async (input, n)=>{
-    let pro = new Promise( (resolve,reject)=>{
-        setTimeout(()=>{
+let delayedUpperCase2 = async (input, n)=>{
+ console.log(b)
+         setTimeout(()=>{
             return typeof input === "string"
             ? 
-            resolve(console.log(input.toUpperCase()))
+            console.log(input.toUpperCase())
             :
-             reject(input)
+            console.log("Your input is ",input)
+                   
         },n)
-    })
-    let res= await pro;
-    return res;
+
+}
+let runfun = async (input,n)=>{
+    try{
+        await delayedUpperCase2(input,n)
+    }catch(e){
+        console.log("ercr",e.toString())
+    }
 }
 
-delayedUpperCase2("usman",1);
+runfun(1,1);
 
