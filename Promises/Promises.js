@@ -2,7 +2,7 @@ function download() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log("donloading..");
-      resolve("Test Download");
+      reject("Test Download");
     }, 3000);
   });
 }
@@ -29,8 +29,9 @@ function display() {
   console.log("display..");
 }
 download()
-  .then((result) => {
+  .then((result, getRejected) => {
     console.log("RES:", result);
+    console.log("Rejected A is:", getRejected);
     return process();
   })
   .then(execute)
