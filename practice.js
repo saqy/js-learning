@@ -28,18 +28,31 @@
 //   }
 // }
 // withAsyncAwait();
-function delayedUpperCase1(input, n) {
-  setTimeout(() => {
-    if (typeof input === "string") {
-      return "test";
-    } else {
-      throw new Error(`HTTP error! status:`);
-    }
-  }, n);
+async function delayedUpperCase1(input, n) {
+  try {
+    return {
+      then(res, rej) {
+        setTimeout(() => {
+          if (typeof input === "string") {
+            res(input.toLocaleUpperCase());
+          } else {
+            rej(input.toString());
+          }
+        }, n);
+      },
+    };
+  } catch (error) {
+    console.log("Firs Error", error);
+  }
 }
 async function result(input, n) {
-  let result = await delayedUpperCase1(input, n);
-  // let result2 = await result;
-  return result;
+  try {
+    let result = await delayedUpperCase1(input, n);
+    let result2 = await result;
+    console.log("Result2", result2);
+    return result;
+  } catch (error) {
+    console.log("Second Error is:", error);
+  }
 }
-console.log("simple async await", result("Test2", 1000));
+result(900, 1000);
