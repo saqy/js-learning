@@ -5,7 +5,7 @@ function inreasingseq(seq) {
     for (let i=0;i<seq.length;i++) {
         if( seq[i] >= seq[i+1] ) {
             issue++;  
-            console.log(' At index ',i,' Array Element  ',seq[i] ,' (',issue , 'Issue Occured )')   
+            console.log('At index ',i,' Array Element  ',seq[i] ,' (',issue , 'Issue Occured )')   
             if(issue > 1) 
                 return 'false'; 
         }      
@@ -13,6 +13,7 @@ function inreasingseq(seq) {
     return true;
 }
 
-let seq = [1,2,3,4,5,6,6,7,8,9,10,11,11];
+let seq = [1,3,2,1];
+console.log('Array ',seq)
 let res = inreasingseq(seq)
 console.log( res )
