@@ -19,4 +19,4 @@ function delayedUpperCase(input,n){
     .catch(e=>console.log(e))
 }
 
-delayedUpperCase(122,1000)
+delayedUpperCase('ishaq',1000)
