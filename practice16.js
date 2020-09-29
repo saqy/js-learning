@@ -7,7 +7,9 @@ function almostIncreasingSequence(array) {
         if ( (array[i] >= array[i+1]) || 
                 ((array[i] <= array[i+1]) &&
                 (array[i] == array[i+2]) &&
-                (array[i+1] == array[i+3])) ) {
+                (array[i+1] == array[i+3])) || 
+                (array.length < 1) || 
+                (array == undefined) ) {
             count++;
             if (count>1) {
                 res=false;
