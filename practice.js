@@ -16,5 +16,5 @@ function checkAlmostIncreasingSequence(sequence) {
     return result === 0 || result === 1;
   }
 }
-let sequence1 = [1, 2, 4, 0];
+let sequence1 = [0, -2, 3, 4];
 console.log(checkAlmostIncreasingSequence(sequence1));
