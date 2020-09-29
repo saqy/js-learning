@@ -1,14 +1,20 @@
 function checkAlmostIncreasingSequence(sequence) {
-  let result = sequence.reduce((acc, curr, key, arr) => {
-    let nextItem = arr[key + 1];
-    if (nextItem != undefined) {
-      curr < arr[key + 1] ? acc : acc++;
-    }
-    return acc;
-  }, 0);
-  console.log("count is:", result);
-  return sequence.length > 0 && (result === 0 || result === 1);
+  if (sequence.length > 0) {
+    let result = sequence.reduce((acc, curr, key, arr) => {
+      let nextItem = arr[key + 1];
+      let secondNextItem = arr[key + 2];
+      if (nextItem != undefined && secondNextItem != undefined) {
+        curr != nextItem &&
+        nextItem != secondNextItem &&
+        curr < nextItem &&
+        nextItem < secondNextItem
+          ? acc
+          : acc++;
+      }
+      return acc;
+    }, 0);
+    return result === 0 || result === 1;
+  }
 }
-let sequence1 = [0, 1, 0]; //[0,0,0]
-let sequence2 = [7, 9, 10, 15, 50, 9, 20, 10];
+let sequence1 = [1, 2, 4, 0];
 console.log(checkAlmostIncreasingSequence(sequence1));
