@@ -8,25 +8,33 @@ The same logic applies for decreasing sequence and strictly decreasing sequence.
 function almostIncreasingSequence(seqArr){
 
 
-//     let numsToBeRemoved = 0
-//     for(let index = 0; index<seqArr.length; index++){
-//         if(seqArr[index] >= seqArr[index + 1]){
-//             numsToBeRemoved++;
-//             if(numsToBeRemoved && numsToBeRemoved > 1){
-//                 return false
-//             }
-//         }   
-        
-//     }
+        let numsToBeRemoved = 0
+        for(let index = 0; index<seqArr.length; index++){
+            if(seqArr[index+1] !== undefined && seqArr[index+2] !== undefined ){
+                if(seqArr[index] < seqArr[index + 1] && seqArr[index + 1] < seqArr[index+2]){
+                    numsToBeRemoved;   
+                }else{
+                    numsToBeRemoved++
+                }
+            } 
+            if(numsToBeRemoved > 1){
+                return false
+            }
+        }
+    
+      return true
+    
+    
+    // let numToRemove = seqArr.reduce((acc,curr,idx,arr)=>{
 
-//   return true
+    //     if(arr[idx+1] !== undefined && arr[idx+2] !== undefined){
+    //         curr < arr[idx+1]  && arr[idx+1] < arr[idx+2]  ? acc : acc++  
+    //     }  
+    //  return acc 
+    // },0)
+    // return numToRemove > 1 ? false : true
+    }
+    console.log(almostIncreasingSequence([1,2,3,4,1,2,3,4]))
+    console.log(almostIncreasingSequence([1,3,2]))
 
 
-let numToRemove = seqArr.reduce((acc,curr,idx)=>{
-     curr >= seqArr[idx+1]  ? acc++ : acc     
- return acc 
-},0)
-return numToRemove > 1 ? false : true
-}
-console.log(almostIncreasingSequence([1,2,1,2]))
-console.log(almostIncreasingSequence([1,3,2]))
