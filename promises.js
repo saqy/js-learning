@@ -47,4 +47,5 @@
         });
 
         //practice promise objects
+        // fulfiled, rejected, pending states
         
