@@ -120,3 +120,15 @@ function* naturalNumbers() {
 const numbers = naturalNumbers();
 console.log(numbers.next().value);
 console.log(numbers.next().value);
+console.log("=========================exampl5===========================");
+function* take(n, iter) {
+  let index = 0;
+  for (const val of iter) {
+    if (index >= n) {
+      return;
+    }
+    index = index + 1;
+    yield val;
+  }
+}
+console.log(...take(3, ["a", "b", "c", "d", "e"]));
