@@ -4,25 +4,22 @@ function almostIncreasingSequence(array) {
     let count=0;
     let res = true;    
     for (let i=0; i < array.length; i++) {
+        if(array[i+1] !== undefined && array[i+2] !=undefined){
         if ( (array[i] >= array[i+1]) || 
                 ((array[i] <= array[i+1]) &&
-                (array[i] == array[i+2]) &&
-                (array[i+1] == array[i+3])) || 
-                (array.length < 1) || 
-                (array == undefined) ) {
+                (array[i] == array[i+2]) ) || 
+                (array.length < 1) ) {
             count++;
-            if (count>1) {
-                res=false;
-            }
-            // else {
-            //     res=true;
-            // }
-        } 
+                if (count>1) {
+                    res=false;
+                }
+            } 
+        }
     }
     console.log('sequence is increasing: ',res)
 } 
-almostIncreasingSequence([1,2,1]);
- 
+almostIncreasingSequence([-3,-2,,0,1,2,3,3,4]);
+ //1,2,3,4,5,3,5,6
 
 
                     // const sequence = (array) => ({
