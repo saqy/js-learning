@@ -6,35 +6,24 @@ The same logic applies for decreasing sequence and strictly decreasing sequence.
 //let seqArr = [1,3,2,1]
 
 function almostIncreasingSequence(seqArr){
-
-
-        let numsToBeRemoved = 0
-        for(let index = 0; index<seqArr.length; index++){
-            if(seqArr[index+1] !== undefined && seqArr[index+2] !== undefined ){
-                if(seqArr[index] < seqArr[index + 1] && seqArr[index + 1] < seqArr[index+2]){
-                    numsToBeRemoved;   
-                }else{
-                    numsToBeRemoved++
-                }
-            } 
-            if(numsToBeRemoved > 1){
-                return false
-            }
-        }
-    
-      return true
-    
-    
-    // let numToRemove = seqArr.reduce((acc,curr,idx,arr)=>{
-
-    //     if(arr[idx+1] !== undefined && arr[idx+2] !== undefined){
-    //         curr < arr[idx+1]  && arr[idx+1] < arr[idx+2]  ? acc : acc++  
-    //     }  
-    //  return acc 
-    // },0)
-    // return numToRemove > 1 ? false : true
+    for(let i = 0; i<seqArr.length;i++){
+        let duplicate = [...seqArr];
+    duplicate.splice(i,1)
+    if(isSeq(duplicate)){
+        return true
     }
-    console.log(almostIncreasingSequence([1,2,3,4,1,2,3,4]))
-    console.log(almostIncreasingSequence([1,3,2]))
+    }
+    return false
+}
 
+function isSeq(duplicate){
+    for(let index = 0; index<duplicate.length; index++){
+        if(duplicate[index] >= duplicate[index + 1]){
+            return false
+        }
+    }
+    return true
+}
 
+console.log(almostIncreasingSequence([1,2,3,99,4,5,6]))
+console.log(almostIncreasingSequence([1,2,3,3,4,4]))
