@@ -1,20 +1,22 @@
-function checkAlmostIncreasingSequence(sequence) {
-  if (sequence.length > 0) {
-    let result = sequence.reduce((acc, curr, key, arr) => {
-      let nextItem = arr[key + 1];
-      let secondNextItem = arr[key + 2];
-      if (nextItem != undefined && secondNextItem != undefined) {
-        curr != nextItem &&
-        nextItem != secondNextItem &&
-        curr < nextItem &&
-        nextItem < secondNextItem
-          ? acc
-          : acc++;
-      }
-      return acc;
-    }, 0);
-    return result === 0 || result === 1;
+console.log("=================For Loop==================");
+const isSequance = (acc, curr, key, arr) => {
+  let nextItem = arr[key + 1];
+  if (arr[key + 1] != undefined) {
+    if (curr >= nextItem) {
+      acc = false;
+    }
   }
+  return acc;
+};
+function checkSequenceAgain(sequence) {
+  let result = false;
+  for (let i = 0; i < sequence.length; i++) {
+    let copiedSequance = [...sequence];
+    copiedSequance.splice(i, 1);
+    if (copiedSequance.reduce(isSequance, true)) {
+      result = true;
+    }
+  }
+  return result;
 }
-let sequence1 = [0, -2, 3, 4];
-console.log(checkAlmostIncreasingSequence(sequence1));
+console.log("Sequance is Increasing :", checkSequenceAgain([1, 2, 3, 4, 5, 0]));
