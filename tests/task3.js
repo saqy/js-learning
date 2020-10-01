@@ -103,5 +103,5 @@ function frequencyCount(arr) {
     console.log("Frequencies => ", obj)
 }
 
-let arr = ['banana', 'cherry', 'orange', 'apple', 'cherry', 'orange', 'apple', 'banana', 'cherry', 'orange', 'fig'];
+let arr = ['banana', 'cherry', 'orange', 'apple', 'cherry', 'orange', 'apple', 'banana', 'cherry', 'orange', 'fig',];
 frequencyCount(arr);
