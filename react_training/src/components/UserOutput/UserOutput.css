@@ -1,0 +1,14 @@
+.show_data{
+    background-color: black;
+    color:white;
+    /* border: 1px solid red; */
+    width: 63%;
+    margin: 20px auto;
+    padding: 10px 0px;
+    border-radius: 15px;
+    
+}
+.show_data:hover {
+    background-color: red;
+    cursor: pointer;    
+}
