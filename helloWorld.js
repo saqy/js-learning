@@ -14,7 +14,7 @@ function download(){
     })   
 }
 
-    thenTest=()=>{
+    thenTest =()=>{
         return {
             then(res, reject){
                 res('hello expression!!!');
@@ -37,7 +37,7 @@ function download(){
 
 function hello(){
 
-    return new Promise((resolve, reject)=>{
+    return new Promise((resolve, reject) =>{
         setTimeout(()=>{
            resolve('done');
          },1000)
