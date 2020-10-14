@@ -1,12 +1,5 @@
 // Arguments Objects
 
-function getName(firstName, lastName) {
-    // let res = arguments[0] + arguments[1];
-    let res = arguments[0] = "Kaleem " + arguments[1];
-    return res;
-}
-
-console.log(getName("Sadaqat ", "Ali"));
 
 
 function setName(newFirstName, newLastName) {
@@ -18,3 +11,13 @@ function setName(newFirstName, newLastName) {
 }
 
 console.log(setName("Usman", "Ali"));
+
+
+
+
+function getName(firstName, lastName) {
+    let res = arguments[0] = "Kaleem " + arguments[1];
+    return res;
+}
+
+console.log(getName("Sadaqat ", "Ali"));
